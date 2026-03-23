@@ -1,0 +1,163 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./styleFui.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
+    rel="stylesheet">
+</head>
+<div id="modalDataFerias" class="modal-base">
+  <div class="modal-content">
+    <h2>Selecionar data de retorno</h2>
+
+    <input type="date" id="inputDataFerias">
+
+    <br><br>
+
+    <div class="acoes-modal">
+      <button class="btn confirmar" onclick="confirmarFerias()">Confirmar</button>
+      <button class="btn cancelar" onclick="fecharModalFerias()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalRecado" class="modal-base">
+  <div class="modal-content">
+    <h3>Adicionar recado</h3>
+
+    <input type="text" id="inputRecado" placeholder="Digite seu recado">
+
+    <div class="acoes-modal">
+      <button class="btn confirmar" onclick="confirmarRecado()">Salvar</button>
+      <button class="btn cancelar" onclick="fecharModalRecado()">Cancelar</button>
+    </div>
+  </div>
+</div>
+<div id="modalSenha" class="modal-base">
+  <div class="modal-content">
+    <h3 id="tituloSenha">Senha</h3>
+
+    <input type="password" id="inputSenha" placeholder="Digite a senha">
+
+    <div class="acoes-modal">
+      <button class="btn confirmar" onclick="confirmarSenha()">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalAviso" class="modal-base">
+  <div class="modal-content">
+    <h3 id="tituloAviso">Aviso</h3>
+    <p id="mensagemAviso"></p>
+    <div class="acoes-modal">
+      <button class="btn confirmar" onclick="fecharModalAviso()">OK</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalInput" class="modal-base">
+  <div class="modal-content">
+    <h3 id="tituloModalInput">Título</h3>
+    <input type="number" id="inputModalValor" min="1">
+    <div class="acoes-modal">
+      <button class="btn confirmar" onclick="confirmarModalInput()">OK</button>
+      <button class="btn cancelar" onclick="fecharModalInput()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<body>
+  <div id="seletorUsuario" class="modal-base">
+    <div class="modal-content">
+      <h2>Quem é você?</h2>
+      <div id="listaUsuarios"></div>
+    </div>
+  </div>
+  <main class="mainContent">
+    <header class="header">
+      <div id="ladoEsq">
+        <img id="ibbSimbol" src="./imgs/logo-dark.png" alt="simbolo">
+        <h1>Painel Fui Web</h1>
+      </div>
+      <ul class="botoesDoHeader">
+        <button id="buttonAdicionar" class="buttonAdicionar" onclick="abrirModalRecado()">+</button>
+        <button id="buttonVoltoJa" class="buttonHeader">Volto já</button>
+        <button id="buttonSairAlmocar" class="buttonHeader">Almoço</button>
+        <button id="buttonAteAmanha" class="buttonHeader">Ir Embora</button>
+        <button id="buttonFerias" class="buttonHeader">Férias / LP</button>
+        <button onclick="trocarUsuario()" class="buttonHeader">Trocar usuário</button>
+        <button onclick="abrirModalSenha('reset')" class="buttonHeader">Redefinir senha</button>
+        <button id="buttonLimpar" class="buttonHeader">Limpar</button>
+      </ul>
+
+    </header>
+    <div id="principal">
+      <ul class="listaPaineis">
+        <div id="João" class="verde pfui">
+          <div class="nome" id="nome.João">João - R:0813</div>
+          <div class="usuario">João</div>
+          <div class="foto"><img src="./imgs/joao.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Tancler" class="verde pfui">
+          <div class="nome" id="nome.Tancler">Tancler - R:0818</div>
+          <div class="usuario">Tancler</div>
+          <div class="foto"><img src="./imgs/tancler.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Jonathan" class="verde pfui">
+          <div class="nome" id="nome.Jonathan">Jonathan - R:0829</div>
+          <div class="usuario">Jonathan</div>
+          <div class="foto"><img src="./imgs/jonathan.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Junior" class="verde pfui">
+          <div class="nome" id="nome.Junior">Junior - R:0812</div>
+          <div class="usuario">Junior</div>
+          <div class="foto"><img src="./imgs/jr.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Jefferson" class="verde pfui">
+          <div class="nome" id="nome.Jefferson">Jefferson - R:0811</div>
+          <div class="usuario">Jefferson</div>
+          <div class="foto"><img src="./imgs/jefferson.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Guilherme" class="verde pfui">
+          <div class="nome" id="nome.Guilherme">Guilherme - R:0819</div>
+          <div class="usuario">Guilherme</div>
+          <div class="foto"><img src="./imgs/guilherme.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Renato" class="verde pfui">
+          <div class="nome" id="nome.Renato">Renato - R:0101</div>
+          <div class="usuario">Renato</div>
+          <div class="foto"><img src="./imgs/renato.png" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Cláudia" class="verde pfui">
+          <div class="nome" id="nome.Cláudia">Cláudia - R:0814</div>
+          <div class="usuario">Cláudia</div>
+          <div class="foto"><img src="./imgs/claudia.jpg" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+        <div id="Arthur" class="verde pfui">
+          <div class="nome" id="nome.Arthur">Arthur - R:0815</div>
+          <div class="usuario">Arthur</div>
+          <div class="foto"><img src="./imgs/unnamed.jpg" alt="imgTeste"></div>
+          <div class="texto"></div>
+        </div>
+      </ul>
+    </div>
+  </main>
+  <script src="./mainFui.js"></script>
+</body>
+
+</html>

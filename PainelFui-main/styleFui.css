@@ -1,0 +1,304 @@
+.vermelho {
+  background-color: rgb(255, 35, 35);
+}
+
+.amarelo {
+  background: linear-gradient(rgb(255, 255, 0), rgb(235, 235, 28));
+}
+
+.verde {
+  background: linear-gradient(rgb(0, 255, 0), rgb(0, 204, 0));
+}
+
+.pfui {
+  margin: 3px;
+  float: left;
+  width: 21vmax;
+  height: 4.8vmax;
+  border-radius: 10px;
+  border: 3px solid black;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2vw;
+  color: black;
+  font-weight: 600;
+}
+
+.pfui:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 20ms;
+}
+
+.header {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(65, 65, 65);
+  width: 100%;
+  font-size: 16px;
+  height: 65px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-bottom: 3px solid rgb(172, 172, 172);
+  min-width: 870px;
+}
+
+h1 {
+  padding-left: 15px;
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+body {
+  background: radial-gradient(rgb(41, 41, 41), black);
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.pro_ky,
+.usuario,
+.ramal,
+.plantao {
+  display: none;
+}
+
+.listaPaineis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding-right: 60px;
+  position: absolute;
+  top: 9%;
+}
+
+.texto {
+  font-size: 0.9vmax;
+  margin-left: 60px;
+}
+
+.nome {
+  float: left;
+  width: 99%;
+  margin: -4px;
+  padding: 2px;
+  font-size: 1.2vmax;
+  margin-bottom: 1px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  border-bottom: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 10px;
+}
+
+.foto {
+  z-index: auto;
+  display: block;
+  margin: -3px;
+  padding: -12px;
+  border-radius: 10px;
+  text-align: left;
+  position: absolute;
+}
+
+.foto img {
+  height: 4.7vmax;
+  width: 4.7vmax;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.botaoVermelho {
+  background: radial-gradient(rgb(224, 0, 0), rgb(173, 0, 0));
+  color: white;
+}
+
+.nomeVermelho {
+  color: white;
+  background: radial-gradient(rgb(224, 0, 0), rgb(173, 0, 0));
+}
+
+.deFerias {
+  background-color: cyan;
+}
+
+.botoesDoHeader {
+  display: flex;
+  position: absolute;
+  min-width: 620px;
+  right: 1%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  top: 3%;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button:hover {
+  transition: 0.1s ease-in-out;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.90);
+  background-color: black;
+  color: white;
+}
+
+.buttonHeader {
+  width: 110px;
+  height: 40px;
+  border: 1px black solid;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  font-style: none;
+}
+
+.buttonAdicionar {
+  border: 1px black solid;
+  font-style: none;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.modal-content {
+  background: #535353;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+  font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.usuario-btn {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.modal-base {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+}
+
+.usuario-btn:hover {
+  background: #535353;
+}
+
+#ibbSimbol {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 5px;
+}
+
+#ladoEsq {
+  display: flex;
+  position: relative;
+}
+
+.acoes-modal {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* botão confirmar */
+.btn.confirmar {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.confirmar:hover {
+  background-color: #218838;
+}
+
+/* botão cancelar */
+.btn.cancelar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn.cancelar:hover {
+  background-color: #c82333;
+}
+
+#inputDataFerias {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+#inputRecado {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+#modalInput input[type="number"] {
+  width: 100%;      
+  padding: 10px 15px; 
+  font-size: 1.2rem;  
+  border-radius: 8px;  
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+#modalRecado input[type="text"] {
+  width: 100%;      
+  padding: 10px 15px;  
+  font-size: 1.2rem;  
+  border-radius: 8px;  
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
